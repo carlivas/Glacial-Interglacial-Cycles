@@ -1,8 +1,8 @@
-import pytest
+from glacial_cycles.base_model import BaseGlacialModel
 
-class ClimateStateModel:
+class GlacialStateModel(BaseGlacialModel):
     '''
-    Climate state model based on Paillard (1998).
+    Glacial state model based on Paillard (1998).
 
     States:
         - i: interglacial
@@ -11,14 +11,16 @@ class ClimateStateModel:
 
     Transitions follow threshold rules depending on insolation and time since last change.
     '''
-    def __init__(self, i0=-0.75, i1=0, i2=0, i3=1, tg=33_000):
+    def __init__(self, i0=-0.75, i1=0.0, i2=0.0, i3=1.0, tg=33_000):
         self.i0, self.i1, self.i2, self.i3, self.tg = i0, i1, i2, i3, tg
         self.tc = 0 # Time since last state change in yrs
         self.state = 'i' # Starts in interglacial
 
-
-    def step(self, insolation, insolation_previous, insolation_previous_peak, dt=1000):
-        i, ip, ip_max = insolation, insolation_previous, insolation_previous_peak
+    def step(self, **kwargs): 
+        i = kwargs['insolation']
+        ip = kwargs.get('insolation_previous', i)
+        ip_max = kwargs.get('insolation_previous_peak', None)
+        dt = kwargs.get('dt', 1000)
         self.tc += dt
 
         # i to g transition if insolation is less than i0 and the previous insolation was greater than i0
@@ -33,6 +35,9 @@ class ClimateStateModel:
         elif self.state == 'G' and i > self.i1:
             self.state = 'i'; self.tc = 0
 
+        return self.state
+
+    def get_state(self):
         return self.state
             
         
