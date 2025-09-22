@@ -1,25 +1,6 @@
-from glacial_cycles.base_model import BaseGlacialModel
-import numpy as np
-
-# Function that calculates the truncation function for the forcing
-def f(x, a = 1):
-    f = 1/2 * (x + np.sqrt(4 * a**2 + x**2))
-    return f
-
-# differential function for use in RK4
-def ice_vol_diff(F, vR, τR, τF, dt):
-    def dvdt(v, t):
-        return ((vR - v)/τR - F/τF) * dt
-    return dvdt
-
-def RK4_step(df, v, t, dt):
-    k1 = df(v, t)
-    k2 = df(v + 0.5*dt*k1, t + 0.5*dt)
-    k3 = df(v + 0.5*dt*k1, t + 0.5*dt)
-    k4 = df(v + dt*k2, t + dt)
-    v = v + (1/6)*dt*(k1 + 2*k2 + 2*k3 + k4)
-    return v
-
+from .base import BaseGlacialModel
+from ..utils import ice_vol_diff, RK4_step
+            
 class GlacialIceVolumeModel(BaseGlacialModel):
     """
     Glacial model based on Paillard (1998)

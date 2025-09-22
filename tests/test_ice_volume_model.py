@@ -1,4 +1,4 @@
-from glacial_cycles.ice_volume_model import GlacialIceVolumeModel
+from glacial_cycles.models.ice_volume import GlacialIceVolumeModel
 
 def test_initial_state_is_interglacial():
     '''

@@ -1,4 +1,4 @@
-from glacial_cycles.state_model import GlacialStateModel
+from glacial_cycles.models.state import GlacialStateModel
 
 def test_initial_state_is_interglacial():
     '''
