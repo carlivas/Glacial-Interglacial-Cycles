@@ -1,9 +1,19 @@
-import numpy as np
+import pytest
 
 class ClimateStateModel:
-    def _init_(self, i0=-0.75, i1=0, i2=0, i3=1, tg=33_000):
+    '''
+    Climate state model based on Paillard (1998).
+
+    States:
+        - i: interglacial
+        - g: mild glacial
+        - G: full glacial
+
+    Transitions follow threshold rules depending on insolation and time since last change.
+    '''
+    def __init__(self, i0=-0.75, i1=0, i2=0, i3=1, tg=33_000):
         self.i0, self.i1, self.i2, self.i3, self.tg = i0, i1, i2, i3, tg
-        self.tc = 0 # Time since last state change
+        self.tc = 0 # Time since last state change in yrs
         self.state = 'i' # Starts in interglacial
 
 
