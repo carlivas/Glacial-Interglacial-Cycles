@@ -13,7 +13,7 @@ def test_transition_to_glacial():
     insolation < i0:
     '''
     model = GlacialIceVolumeModel(i0=0.5)  # ensure threshold is easy to trigger
-    state = model.step(insolation=0.0)
+    state = model.step(insolation=0.0, v=0.0)
     assert state == "g"
 
 def test_transition_to_full_glacial():
@@ -34,6 +34,6 @@ def test_transition_back_to_interglacial():
     '''
     model = GlacialIceVolumeModel(i1=-1.0)
     model.state = "G"
-    state = model.step(insolation=0.0)
+    state = model.step(insolation=0.0, v=0.0)
     assert state == "i"
 
