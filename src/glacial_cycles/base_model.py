@@ -10,7 +10,7 @@ class BaseGlacialModel(ABC):
     def step(self, **kwargs):
         """
         Advance the model one time step.
-        Returns the current state (e.g., 'i', 'g', 'G' or 0/1/2).
+        Returns the current state (e.g., 'i', 'g' or 'G').
         """
         pass
 
