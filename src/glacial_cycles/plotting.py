@@ -111,6 +111,10 @@ def plot_state_model(
     for ax in axs:
         if not ax.has_data():   # True if nothing plotted
             fig.delaxes(ax)
+
+    # Force bottom axis to show labels
+    fig.axes[-1].set_xlabel("Time before present [kyr]")
+    fig.axes[-1].tick_params(labelbottom=True)
     return fig, axs
 
 
@@ -203,5 +207,9 @@ def plot_icevol_model(
     for ax in axs:
         if not ax.has_data():   # True if nothing plotted
             fig.delaxes(ax)
+
+    # Force bottom axis to show labels
+    fig.axes[-1].set_xlabel("Time before present [kyr]")
+    fig.axes[-1].tick_params(labelbottom=True)
     return fig, axs
 
