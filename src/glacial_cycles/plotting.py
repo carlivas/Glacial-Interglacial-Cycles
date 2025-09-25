@@ -1,3 +1,17 @@
+"""
+Plotting utilities for glacial cycle simulations.
+
+Functions
+---------
+- plot_state_model(time, insolation, states, i0, i1, i3, LR04_time=None, LR04_iso=None, 
+                   EDC_time=None, EDC_iso=None, title="Climate State Model", savepath=None):
+    Plot results of a glacial state model simulation.
+
+- plot_icevol_model(time, insolation, forcing, ice_volume, states, vR, LR04_time=None,
+                    LR04_iso=None, EDC_time=None, EDC_iso=None, title="Ice Volume Model",
+                    savepath=None):
+    Plot results of a glacial ice volume model simulation.
+"""
 import numpy as np
 import matplotlib.pyplot as plt
 from typing import List 
@@ -16,10 +30,35 @@ def plot_state_model(
     EDC_time=None,
     EDC_iso=None,
     title: str = "Climate State Model",
-    savepath = None,
 ):
     """
-    Plot the results of a glacial state model simulation.
+    Plot results of a glacial state model simulation.
+
+    Parameters
+    ----------
+    - time : np.ndarray
+        Array of time points.
+    - insolation : np.ndarray
+        Insolation values corresponding to `time`.
+    - states : List[GlacialState]
+        Model states over time.
+    - i0, i1, i3 : float
+        Thresholds for state transitions.
+    - LR04_time, LR04_iso : optional
+        Time and δ18O proxy data from LR04 stack.
+    - EDC_time, EDC_iso : optional
+        Time and δ18O proxy data from EDC core.
+    - title : str, optional
+        Plot title.
+    - savepath : str, optional
+        Path to save the figure.
+
+    Returns
+    -------
+    - fig : matplotlib.figure.Figure
+        Figure object.
+    - axs : np.ndarray
+        Array of axes objects.
     """
     gs = dict(hspace=0)
     fig, axs = plt.subplots(4, 1, sharex=True, gridspec_kw=gs)
@@ -87,10 +126,39 @@ def plot_icevol_model(
     EDC_time=None,
     EDC_iso=None,
     title: str = "Ice Volume Model",
-    savepath: str = None,
 ):
     """
-    Plot the results of a glacial ice volume model simulation.
+    Plot results of a glacial ice volume model simulation.
+
+    Parameters
+    ----------
+    - time : np.ndarray
+        Array of time points.
+    - insolation : np.ndarray
+        Insolation values.
+    - forcing : np.ndarray
+        Forcing used in the ice volume model.
+    - ice_volume : List[float]
+        Ice volume over time.
+    - states : List[GlacialState]
+        Model states over time.
+    - vR : np.ndarray
+        State-dependent reference ice volume.
+    - LR04_time, LR04_iso : optional
+        LR04 δ18O proxy data.
+    - EDC_time, EDC_iso : optional
+        EDC δ18O proxy data.
+    - title : str, optional
+        Plot title.
+    - savepath : str, optional
+        Path to save the figure.
+
+    Returns
+    -------
+    - fig : matplotlib.figure.Figure
+        Figure object.
+    - axs : np.ndarray
+        Array of axes objects.
     """
     gs = dict(hspace=0)
     fig, axs = plt.subplots(4, 1, sharex=True, gridspec_kw=gs)
