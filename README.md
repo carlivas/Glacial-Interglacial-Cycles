@@ -12,7 +12,7 @@ This simulator provides a **Python implementation** of such models for experimen
 <img src="figs/paillard_model2_berger.png" alt="Paillard Model 2" width="600"/>
 
 #### Continuous ice volume model with general cooling
-<img src="figs/paillard_model3_berger.png" alt="Paillard Model 3" width="750"/>
+<img src="figs/paillard_model3_berger.png" alt="Paillard Model 3" width="900"/>
 
 ---
 
