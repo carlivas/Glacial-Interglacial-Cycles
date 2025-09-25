@@ -35,5 +35,5 @@ pip install -r requirements.txt
 ```
 
 📚 References
-- [Paillard, D. (1998). The timing of Pleistocene glaciations from a simple multiple-state climate model. Nature, 391, 378–381.](https://github.com/carlivas/Glacial-Interglacial-Cycles/blob/main/documents/Paillard_1998_Nature.pdf)
-- [Earth & Climate Physics Project Report](https://github.com/carlivas/Glacial-Interglacial-Cycles/blob/main/documents/Earth_and_Climate_Physics_Project.pdf).
+- [Paillard, D. (1998). The timing of Pleistocene glaciations from a simple multiple-state climate model. Nature, 391, 378–381](https://github.com/carlivas/Glacial-Interglacial-Cycles/blob/main/documents/Paillard_1998_Nature.pdf)
+- [Earth & Climate Physics Project Report](https://github.com/carlivas/Glacial-Interglacial-Cycles/blob/main/documents/Earth_and_Climate_Physics_Project.pdf)
