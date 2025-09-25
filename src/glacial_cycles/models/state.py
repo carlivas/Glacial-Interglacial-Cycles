@@ -22,7 +22,6 @@ class GlacialStateModel(BaseGlacialModel):
         self.__state = GlacialState.INTERGLACIAL
         self._set_state(params.get('state', GlacialState.INTERGLACIAL))
 
-
     @property
     def state(self) -> GlacialState:
         """Current state (read-only, managed internally)."""
