@@ -1,4 +1,4 @@
-# 🧊 Glacial-Interglacial Cycles Simulator
+# 🧊 Glacial-Interglacial Cycles
 
 This project implements modular models of glacial–interglacial cycles, inspired by the threshold-based framework of Paillard (1998) and extended for flexible simulation of ice volume, orbital forcing, and climate feedbacks.
 
