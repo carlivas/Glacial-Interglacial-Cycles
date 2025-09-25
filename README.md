@@ -5,8 +5,13 @@ This project implements modular models of glacial–interglacial cycles, inspire
 Glacial–interglacial cycles of the late Pleistocene are characterized by nonlinear transitions between multiple climate states — *interglacial*, *mild glacial*, and *full glacial*. These transitions are not explained by orbital forcing alone, but can be reproduced by simple conceptual models with thresholds and memory effects.  
 
 This simulator provides a **Python implementation** of such models for experimentation, teaching, and research.
+#### Glacial state model
+<img src="figs/paillard_model1_berger.png" alt="Paillard Model 1" width="600"/>
 
+#### Continuous ice volume model
 <img src="figs/paillard_model2_berger.png" alt="Paillard Model 2" width="600"/>
+
+#### Continuous ice volume model with general cooling
 <img src="figs/paillard_model3_berger.png" alt="Paillard Model 3" width="600"/>
 
 ---
