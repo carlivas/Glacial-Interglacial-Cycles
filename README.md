@@ -6,8 +6,8 @@ Glacial–interglacial cycles of the late Pleistocene are characterized by nonli
 
 This simulator provides a **Python implementation** of such models for experimentation, teaching, and research.
 
-<img src="figs/paillard_model2_berger.png" alt="Paillard Model 2" width="400"/>
-<img src="figs/paillard_model3_berger.png" alt="Paillard Model 3" width="400"/>
+<img src="figs/paillard_model2_berger.png" alt="Paillard Model 2" width="600"/>
+<img src="figs/paillard_model3_berger.png" alt="Paillard Model 3" width="600"/>
 
 ---
 
