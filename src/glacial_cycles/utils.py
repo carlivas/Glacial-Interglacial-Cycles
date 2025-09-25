@@ -7,9 +7,9 @@ def f(x, a = 1):
     return f
 
 # differential function for use in RK4
-def ice_vol_diff(F, vR, τR, τF, dt):
+def ice_vol_diff(F, vR, τR, τF):
     def dvdt(v, t):
-        return ((vR - v)/τR - F/τF) * dt
+        return ((vR - v)/τR - F/τF)
     return dvdt
 
 def RK4_step(df, v, t, dt):
