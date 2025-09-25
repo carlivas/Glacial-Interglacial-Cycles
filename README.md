@@ -33,6 +33,10 @@ This simulator provides a **Python implementation** of such models for experimen
 - Forcing is based on **summer solstice insolation at 65°N** (Berger 1978), preprocessed with a truncation function to reflect nonlinear ice-sheet sensitivity.
 - Models are robust to parameter changes and reproduce key features such as the unusual duration of Marine Isotope Stage 11.
 
+
+📚 References
+- [Paillard, D. (1998). The timing of Pleistocene glaciations from a simple multiple-state climate model. Nature, 391, 378–381](https://github.com/carlivas/Glacial-Interglacial-Cycles/blob/main/documents/Paillard_1998_Nature.pdf)
+- [Earth & Climate Physics Project Report](https://github.com/carlivas/Glacial-Interglacial-Cycles/blob/main/documents/Earth_and_Climate_Physics_Project.pdf)
 ---
 
 ## 🚀 Installation
@@ -42,6 +46,6 @@ cd Glacial-Interglacial-Cycles
 pip install -r requirements.txt
 ```
 
-📚 References
-- [Paillard, D. (1998). The timing of Pleistocene glaciations from a simple multiple-state climate model. Nature, 391, 378–381](https://github.com/carlivas/Glacial-Interglacial-Cycles/blob/main/documents/Paillard_1998_Nature.pdf)
-- [Earth & Climate Physics Project Report](https://github.com/carlivas/Glacial-Interglacial-Cycles/blob/main/documents/Earth_and_Climate_Physics_Project.pdf)
+## 📖 Documentation
+Full API docs are available here:  
+👉 [Glacial-Interglacial-Cycles Documentation](https://carlivas.github.io/Glacial-Interglacial-Cycles/glacial_cycles.html)
