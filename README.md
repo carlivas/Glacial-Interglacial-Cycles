@@ -4,7 +4,7 @@ This project implements modular models of glacial-interglacial cycles, allowing 
 
 ## Features
 - Base model abstraction with state management
-- Ice volume models (Paillard-inspired, configurable)
+- Ice volume model
 - Simulation orchestration
 - Utility functions for analysis & plotting
 
