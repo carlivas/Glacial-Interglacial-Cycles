@@ -10,7 +10,7 @@ This project implements modular models of glacial-interglacial cycles, allowing 
 
 ## Installation
 ```bash
-git clone <repo>
+git clone https://github.com/carlivas/Glacial-Interglacial-Cycles
 cd glacial_cycles
 pip install -r requirements.txt
 
