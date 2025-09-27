@@ -7,7 +7,7 @@ class GlacialIceVolumeModel(BaseGlacialModel):
     """
     Glacial cycle model with explicit ice volume dynamics (Paillard, 1998).
 
-    The model evolves ice volume using a relaxation scheme with thresholds 
+    The model evolves ice volume using a relaxation scheme with thresholds
     on insolation and ice volume that govern transitions between glacial states.
 
     Notes
@@ -16,6 +16,7 @@ class GlacialIceVolumeModel(BaseGlacialModel):
         - Truncate with `f(x) = 0.5 [x + sqrt(4a² + x²)]` and normalize.
     - Dynamics are integrated using a 4th-order Runge–Kutta (RK4) scheme.
     """
+
     i0: float
     """Insolation threshold for INTERGLACIAL → MILD_GLACIAL transition (default=-0.75)."""
     i1: float
@@ -32,11 +33,11 @@ class GlacialIceVolumeModel(BaseGlacialModel):
     """Relaxation timescale (set by state if not provided)."""
     v: float
     """Current ice volume."""
+
     @property
     def state(self) -> GlacialState:
         """Current glacial state (read-only)."""
         return self.__state
-
 
     def __init__(self, **params: Any):
         self.i0 = params.get("i0", -0.75)
